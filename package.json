@@ -1,0 +1,15 @@
+{
+  "name": "halo-art-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kavalon <klovelovely@live.com> (http://mar.moe)",
+  "license": "MIT",
+  "dependencies": {
+    "art-template": "^4.0.0"
+  }
+}
