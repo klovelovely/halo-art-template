@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>halo artTemplate</title>
+    <script src="template.js"></script>
+</head>
+<body>
+
+<div id="User"></div>
+<script type="text/html" id="tplUser">
+    {{if user}}
+    <h2>{{user.name}}</h2>
+    <p>Lorem Ipsum {{user.profile.age}} asredo</p>
+    {{/if}}
+    <input type="date" max="{{getCurrentDate}}">
+</script>
+
+<script>
+    template.helper('getCurrentDate', function () {
+        return new Date().toJSON().split('T')[0];
+    });
+    document.getElementById('User').innerHTML = template('tplUser', {
+        user: {
+            name: 'aui',
+            profile: {
+                age: 23
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

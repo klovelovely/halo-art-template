@@ -26,7 +26,7 @@ const server = http.createServer(function (request, response) {
 
     response.write(html);
 
-    console.log("new one => count: " + visitCount++);
+    console.log("new request => count: " + visitCount++);
 
     // 结束输出
     response.end();
